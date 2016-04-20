@@ -1,0 +1,19 @@
+{
+  "name": "hamsterhub",
+  "version": "1.0.0",
+  "description": "HamsterHub ========== By Alexandre Farrenq & Clara Fourcade",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alegzandr/hamsterhub.git"
+  },
+  "author": "Alexandre Farrenq / Clara Fourcade",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alegzandr/hamsterhub/issues"
+  },
+  "homepage": "https://github.com/Alegzandr/hamsterhub#readme"
+}

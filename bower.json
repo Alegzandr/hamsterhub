@@ -1,0 +1,21 @@
+{
+  "name": "hamsterhub",
+  "description": "HamsterHub ========== By Alexandre Farrenq & Clara Fourcade",
+  "main": "index.js",
+  "authors": [
+    "Alexandre Farrenq / Clara Fourcade"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/Alegzandr/hamsterhub",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "web/assets/vendor/",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "normalize-scss": "normalize.scss#^4.0.3"
+  }
+}
