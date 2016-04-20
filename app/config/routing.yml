@@ -1,3 +1,3 @@
-app:
-    resource: "@AppBundle/Controller/"
-    type:     annotation
+hamster_hub:
+    resource: "@HamsterHubBundle/Resources/config/routing.yml"
+    prefix:   /
