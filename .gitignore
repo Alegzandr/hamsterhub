@@ -10,3 +10,12 @@
 /vendor/
 /bin/
 /composer.phar
+*.log
+.DS_Store
+Thumbs.db
+*.idea
+*.sublime-.*
+.*.swp
+.swp
+.sass-cache.*
+.css.map
