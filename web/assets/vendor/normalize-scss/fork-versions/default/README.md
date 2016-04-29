@@ -18,7 +18,7 @@ var sass = require('node-sass'),
 sass.render({
   file: scss_filename,
   includePaths: [
-    path.join(__dirname, 'node_modules/support-for/sass')
+    path.dirname(require.resolve('support-for'))
   ]
 }, function(err, result) { /*...*/ });
 ```

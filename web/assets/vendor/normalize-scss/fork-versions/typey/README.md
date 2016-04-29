@@ -18,8 +18,8 @@ var sass = require('node-sass'),
 sass.render({
   file: scss_filename,
   includePaths: [
-    path.join(__dirname, 'node_modules/support-for/sass'),
-    path.join(__dirname, 'node_modules/typey/stylesheets'),
+    path.dirname(require.resolve('support-for')),
+    path.dirname(require.resolve('typey'))
   ]
 }, function(err, result) { /*...*/ });
 ```

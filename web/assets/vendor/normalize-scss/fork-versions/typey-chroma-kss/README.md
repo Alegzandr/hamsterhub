@@ -15,7 +15,7 @@
 npm install --save-dev support-for typey chroma-sass
 ```
 
-3. Add support-for's `sass` directory to your nodeSass' [`includePaths` option](https://github.com/sass/node-sass#includepaths).
+3. Add the dependencies' directories to your nodeSass' [`includePaths` option](https://github.com/sass/node-sass#includepaths).
 
  ```js
 var sass = require('node-sass'),
@@ -24,8 +24,9 @@ var sass = require('node-sass'),
 sass.render({
   file: scss_filename,
   includePaths: [
-    path.join(__dirname, 'node_modules/support-for/sass'),
-    path.join(__dirname, 'node_modules/typey/stylesheets'),
+    path.dirname(require.resolve('chroma-sass')),
+    path.dirname(require.resolve('support-for')),
+    path.dirname(require.resolve('typey'))
   ]
 }, function(err, result) { /*...*/ });
 ```
@@ -44,6 +45,7 @@ In addition to copying these files to your Sass project, you'll also need to:
 1. Edit your `Gemfile` file to add:
 
  ```ruby
+gem 'chroma-sass', '~> 1.0'
 gem 'support-for', '~> 1.0'
 gem 'typey', '~> 1.0.0.beta.7'
 ```
@@ -51,6 +53,7 @@ gem 'typey', '~> 1.0.0.beta.7'
 2. If you use Compass, edit your `config.rb` file to add:
 
  ```ruby
+require 'chroma-sass'
 require 'support-for'
 require 'typey'
 ```
