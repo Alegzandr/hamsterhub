@@ -1,3 +1,15 @@
 hamster_hub_homepage:
     path:     /
     defaults: { _controller: HamsterHubBundle:Default:index }
+
+hamster_hub_dashboard:
+    path:     /dashboard/{username}
+    defaults: { _controller: HamsterHubBundle:Dashboard:index }
+
+hamster_hub_channel:
+    path:     /channel/{username}
+    defaults: { _controller: HamsterHubBundle:Channel:index }
+
+hamster_hub_video:
+      path:     /video/{videoId}
+      defaults: { _controller: HamsterHubBundle:Video:index }
