@@ -16,8 +16,9 @@ class AppKernel extends Kernel
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new FOS\UserBundle\FOSUserBundle(),
-            new HamsterHubBundle\HamsterHubBundle(),
+            new UserBundle\UserBundle(),
             new EntityBundle\EntityBundle(),
+            new HamsterHubBundle\HamsterHubBundle(),
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {

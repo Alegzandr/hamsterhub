@@ -366,4 +366,12 @@ th {
 nav > ul > li {
   display: inline-block; }
 
+form[name="fos_user_registration_form"], form[name="fos_user_login_form"] {
+  display: none;
+  position: absolute;
+  background-color: #000;
+  color: #fff;
+  margin: 0 auto;
+  top: 25%; }
+
 /*# sourceMappingURL=main.css.map */

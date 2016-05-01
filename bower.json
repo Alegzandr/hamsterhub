@@ -19,6 +19,7 @@
     "normalize-scss": "normalize.scss#^4.0.3"
   },
   "devDependencies": {
-    "normalize-scss": "normalize.scss#^4.1.0"
+    "normalize-scss": "normalize.scss#^4.1.0",
+    "jquery": "^2.2.3"
   }
 }
