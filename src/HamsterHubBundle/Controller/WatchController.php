@@ -4,7 +4,7 @@ namespace HamsterHubBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class VideoController extends Controller
+class WatchController extends Controller
 {
     public function indexAction($videoId)
     {

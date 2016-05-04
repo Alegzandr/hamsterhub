@@ -10,6 +10,10 @@ hamster_hub_channel:
     path:     /channel/{username}
     defaults: { _controller: HamsterHubBundle:Channel:index }
 
-hamster_hub_video:
-      path:     /video/{videoId}
-      defaults: { _controller: HamsterHubBundle:Video:index }
+hamster_hub_watch:
+      path:     /watch/{videoId}
+      defaults: { _controller: HamsterHubBundle:Watch:index }
+
+hamster_hub_upload:
+      path:     /upload
+      defaults: { _controller: HamsterHubBundle:Upload:index }

@@ -12,7 +12,7 @@
         <ul>
             <li><a href="/">Accueil</a></li>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                <li><a href="#">Envoyer une vidéo</a></li>
+                <li><a href="#" id="upload">Envoyer une vidéo</a></li>
                 <li>{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                 <a href="{{ path('fos_user_security_logout') }}">
                     {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
@@ -29,6 +29,9 @@
 <main role="main">
     {% render url('fos_user_registration_register') %}
     {% render url('fos_user_security_login') %}
+    {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+        {% render url('hamster_hub_upload') %}
+    {% endif %}
 
     {% block body %}{% endblock %}
 </main>

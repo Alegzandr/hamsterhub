@@ -366,7 +366,7 @@ th {
 nav > ul > li {
   display: inline-block; }
 
-form[name="fos_user_registration_form"], form[name="fos_user_login_form"] {
+form[name="fos_user_registration_form"], form[name="fos_user_login_form"], form[name="upload"] {
   display: none;
   position: absolute;
   background-color: #000;

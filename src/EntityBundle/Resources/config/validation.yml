@@ -1,0 +1,11 @@
+EntityBundle\Entity\Task:
+    properties:
+        title:
+            - NotBlank: ~
+        url:
+            - NotBlank: ~
+        authorId:
+            - NotBlank: ~
+        uploadDate:
+            - NotBlank: ~
+            - Type: \DateTime
