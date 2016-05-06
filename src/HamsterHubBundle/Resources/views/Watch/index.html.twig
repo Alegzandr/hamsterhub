@@ -1,5 +1,15 @@
 {% extends 'HamsterHubBundle::base.html.twig' %}
 
-{% block title %}{% endblock %}
+{% block title %}{{ video.title }}{% endblock %}
 
-{% block body %}{% endblock %}
+{% block body %}
+    <h3>
+        <a href="/watch/{{ video.id }}">{{ video.title }}</a>
+    </h3>
+
+    <h4>
+        by <a href="/channel/{{ video.user }}">{{ video.user }}</a>
+    </h4>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ video.url[32:43] }}" allowfullscreen></iframe>
+{% endblock %}

@@ -37,6 +37,11 @@ class Video
      */
     private $uploadDate;
 
+    /**
+     * @var \EntityBundle\Entity\User
+     */
+    private $user;
+
 
     /**
      * Get id
@@ -166,6 +171,27 @@ class Video
     public function getUploadDate()
     {
         return $this->uploadDate;
+    }
+
+    /**
+     * Set user
+     *
+     * @param \EntitybBundle\Entity\User $user
+     * @return Video
+     */
+    public function setUser(\EntityBundle\Entity\User $user = null)
+    {
+        $this->user = $user;
+        return $this;
+    }
+    /**
+     * Get user
+     *
+     * @return \EntityBundle\Entity\User
+     */
+    public function getUser()
+    {
+        return $this->user;
     }
 }
 

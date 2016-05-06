@@ -24,4 +24,11 @@ EntityBundle\Entity\Video:
         uploadDate:
             type: datetime
             column: upload_date
+    manyToOne:
+          user:
+              targetEntity: EntityBundle\Entity\User
+              inversedBy: user
+              joinColumn:
+                  name: author_id
+                  referencedColumnName: id
     lifecycleCallbacks: {  }
