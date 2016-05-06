@@ -9,12 +9,15 @@ EntityBundle\Entity\Video:
             generator:
                 strategy: AUTO
     fields:
-        title:
-            type: string
-            length: 255
         url:
             type: string
             length: 255
+        title:
+            type: string
+            length: 255
+        description:
+              type: string
+              length: 255
         authorId:
             type: integer
             column: author_id

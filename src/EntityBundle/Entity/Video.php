@@ -15,12 +15,17 @@ class Video
     /**
      * @var string
      */
+    private $url;
+
+    /**
+     * @var string
+     */
     private $title;
 
     /**
      * @var string
      */
-    private $url;
+    private $description;
 
     /**
      * @var int
@@ -41,6 +46,30 @@ class Video
     public function getId()
     {
         return $this->id;
+    }
+
+    /**
+     * Set url
+     *
+     * @param string $url
+     *
+     * @return Video
+     */
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    /**
+     * Get url
+     *
+     * @return string
+     */
+    public function getUrl()
+    {
+        return $this->url;
     }
 
     /**
@@ -68,27 +97,27 @@ class Video
     }
 
     /**
-     * Set url
+     * Set description
      *
-     * @param string $url
+     * @param string $description
      *
      * @return Video
      */
-    public function setUrl($url)
+    public function setDescription($description)
     {
-        $this->url = $url;
+        $this->description = $description;
 
         return $this;
     }
 
     /**
-     * Get url
+     * Get description
      *
      * @return string
      */
-    public function getUrl()
+    public function getDescription()
     {
-        return $this->url;
+        return $this->description;
     }
 
     /**
