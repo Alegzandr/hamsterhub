@@ -21,6 +21,7 @@ class UploadController extends Controller
             $form->handleRequest($request);
             if ($form->isSubmitted() && $form->isValid()) {
                 $video->setAuthorId($this->getUser()->getId());
+                $video->setUser($this->getUser());
                 $video->setUploadDate(new \DateTime(date('Y-m-d H:i:s')));
 
                 $em = $this->getDoctrine()->getManager();

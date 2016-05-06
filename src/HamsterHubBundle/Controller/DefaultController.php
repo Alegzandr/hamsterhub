@@ -10,7 +10,7 @@ class DefaultController extends Controller
     {
         $url = $this->getDoctrine()
             ->getRepository('EntityBundle:Video')
-            ->findAll();
+            ->findBy(array(), array('id' => 'desc'));
 
         return $this->render('HamsterHubBundle:Default:index.html.twig', array('url' => $url));
     }

@@ -28,6 +28,7 @@ EntityBundle\Entity\Video:
           user:
               targetEntity: EntityBundle\Entity\User
               inversedBy: user
+              cascade: ["persist"]
               joinColumn:
                   name: author_id
                   referencedColumnName: id

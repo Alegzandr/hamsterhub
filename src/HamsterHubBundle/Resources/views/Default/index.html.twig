@@ -4,12 +4,23 @@
 
 {% block body %}
     {% for video in url %}
-        <h3>
-            <a href="/watch/{{ video.id }}">{{ video.title }}</a>
-            by <a href="/channel/{{ video.user }}">{{ video.user }}</a>
-        </h3>
-        <a href="/watch/{{ video.id }}">
-            <img src="http://img.youtube.com/vi/{{ video.url[32:43] }}/0.jpg" alt="{{ video.title }}">
-        </a>
+        <table>
+            <tr>
+                <td>
+                    <h3>
+                        <a href="/watch/{{ video.id }}">{{ video.title }}</a>
+                        by <a href="/channel/{{ video.user }}">{{ video.user }}</a>
+                    </h3>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/watch/{{ video.id }}">
+                        <img src="http://img.youtube.com/vi/{{ video.url[32:43] }}/0.jpg" alt="{{ video.title }}">
+                    </a>
+                </td>
+                <td>{{ video.description }}</td>
+            </tr>
+        </table>
     {% endfor %}
 {% endblock %}
