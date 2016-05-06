@@ -8,25 +8,32 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use HamsterHubBundle\Form\Type\UploadVideoType;
 
 class UploadController extends Controller
 {
-    public function indexAction()
+    public function videoAction(Request $request)
     {
         if ($this->container->get('security.context')->isGranted('IS_AUTHENTICATED_FULLY')) {
             $video = new Video();
-            $video->setAuthorId($this->getUser()->getId());
-            $video->setUploadDate(new \DateTime(date('Y-m-d H:i:s')));
+            $form = $this->createForm(UploadVideoType::class, $video);
 
-            $form = $this->createFormBuilder($video)
-                ->add('title', TextType::class, array('label' => 'Titre de la vidéo'))
-                ->add('url', TextType::class, array('label' => 'URL de la vidéo'))
-                ->add('save', SubmitType::class, array('label' => 'Upload'))
-                ->getForm();
+            $form->handleRequest($request);
+            if ($form->isSubmitted() && $form->isValid()) {
+                $video->setAuthorId($this->getUser()->getId());
+                $video->setUploadDate(new \DateTime(date('Y-m-d H:i:s')));
 
-            return $this->render('HamsterHubBundle:Upload:index.html.twig', array(
-                'form' => $form->createView(),
-            ));
+                $em = $this->getDoctrine()->getManager();
+                $em->persist($video);
+                $em->flush();
+
+                return $this->redirectToRoute('hamster_hub_homepage');
+            }
+
+            return $this->render(
+                'HamsterHubBundle:Upload:index.html.twig',
+                array('form' => $form->createView())
+            );
         }
     }
 }

@@ -16,4 +16,4 @@ hamster_hub_watch:
 
 hamster_hub_upload:
       path:     /upload
-      defaults: { _controller: HamsterHubBundle:Upload:index }
+      defaults: { _controller: HamsterHubBundle:Upload:video }
