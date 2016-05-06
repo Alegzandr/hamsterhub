@@ -1,3 +1,11 @@
 user_homepage:
     path:     /
     defaults: { _controller: UserBundle:Default:index }
+
+login_check:
+    pattern: /login_check
+    defaults: { _controller: FOSUserBundle:Security:check }
+    requirements:
+        _method: POST
+    options:
+        expose: true

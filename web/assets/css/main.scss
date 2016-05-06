@@ -1,8 +1,9 @@
 @import "../vendor/normalize-scss/sass/normalize";
 @include normalize();
 
-@import "partials/base";
-@import "partials/fonts";
+@import "modules/fonts";
 
-@import "modules/header";
-@import "modules/modals";
+@import "partials/base";
+@import "partials/header";
+@import "partials/modals";
+@import "partials/footer";

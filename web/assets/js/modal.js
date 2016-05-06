@@ -1,40 +1,61 @@
 $(function () {
     $('#register').click(function () {
-        var form = 'form[name="fos_user_registration_form"]';
-
-        $('form[name="fos_user_login_form"]').hide();
-        $('form[name="upload"]').hide();
-        if ($(form).css('display') === 'none') {
-            $(form).show();
+        $('.login-popup').hide();
+        $('.upload-popup').hide();
+        
+        if ($('.register-popup').css('display') === 'none') {
+            $('.register-popup').fadeIn();
+            $('.mask').fadeIn();
         }
         else {
-            $(form).hide();
+            $('.register-popup').fadeOut();
+            $('.mask').fadeOut();
         }
     });
 
     $('#login').click(function () {
-        var form = 'form[name="fos_user_login_form"]';
+        $('.register-popup').hide();
+        $('.upload-popup').hide();
 
-        $('form[name="fos_user_registration_form"]').hide();
-        $('form[name="upload"]').hide();
-        if ($(form).css('display') === 'none') {
-            $(form).show();
+        if ($('.login-popup').css('display') === 'none') {
+            $('.login-popup').fadeIn();
+            $('.mask').fadeIn();
         }
         else {
-            $(form).hide();
+            $('.login-popup').fadeOut();
+            $('.mask').fadeOut();
         }
     });
 
     $('#upload').click(function () {
-        var form = 'form[name="upload"]';
-
-        $('form[name="fos_user_login_form"]').hide();
-        $('form[name="fos_user_registration_form"]').hide();
-        if ($(form).css('display') === 'none') {
-            $(form).show();
+        if ($('.upload-popup').css('display') === 'none') {
+            $('.upload-popup').fadeIn();
+            $('.mask').fadeIn();
         }
         else {
-            $(form).hide();
+            $('.upload-popup').fadeOut();
+            $('.mask').fadeOut();
         }
     });
+
+    $('.mask').click(function () {
+        $('.register-popup').fadeOut();
+        $('.login-popup').fadeOut();
+        $('.upload-popup').fadeOut();
+        $('.mask').fadeOut();
+    })
+
+    $('.mask').click(function () {
+        $('.register-popup').fadeOut();
+        $('.login-popup').fadeOut();
+        $('.upload-popup').fadeOut();
+        $('.mask').fadeOut();
+    })
+
+    $('.close-cross').click(function () {
+        $('.register-popup').fadeOut();
+        $('.login-popup').fadeOut();
+        $('.upload-popup').fadeOut();
+        $('.mask').fadeOut();
+    })
 });
