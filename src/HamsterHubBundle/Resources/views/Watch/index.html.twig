@@ -3,9 +3,7 @@
 {% block title %}{{ video.title }}{% endblock %}
 
 {% block body %}
-    <h3>
-        <a href="/watch/{{ video.id }}">{{ video.title }}</a>
-    </h3>
+    <h3>{{ video.title }}</h3>
 
     <h4>
         by <a href="/channel/{{ video.user }}">{{ video.user }}</a>
