@@ -1,11 +1,10 @@
-EntityBundle\Entity\Task:
+EntityBundle\Entity\Video:
     properties:
         title:
             - NotBlank: ~
         url:
             - NotBlank: ~
-        authorId:
+            - Url: ~
+            - Regex: '/https:\/\/www.youtube.com\/watch\?v=.........../'
+        description:
             - NotBlank: ~
-        uploadDate:
-            - NotBlank: ~
-            - Type: \DateTime

@@ -176,7 +176,7 @@ class Video
     /**
      * Set user
      *
-     * @param \EntitybBundle\Entity\User $user
+     * @param \EntityBundle\Entity\User $user
      * @return Video
      */
     public function setUser(\EntityBundle\Entity\User $user = null)
@@ -194,4 +194,3 @@ class Video
         return $this->user;
     }
 }
-
