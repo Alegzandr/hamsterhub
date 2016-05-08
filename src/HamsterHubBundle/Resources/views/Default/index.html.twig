@@ -3,24 +3,25 @@
 {% block title %}Accueil{% endblock %}
 
 {% block body %}
-    {% for video in url %}
-        <table>
+    <table>
+        {% for video in url %}
             <tr>
                 <td colspan="2">
                     <h3>
                         <a href="/watch/{{ video.id }}">{{ video.title }}</a>
-                        by <a href="/channel/{{ video.user }}">{{ video.user }}</a>
+                        de <a href="/channel/{{ video.user }}">{{ video.user }}</a>
                     </h3>
                 </td>
             </tr>
             <tr>
                 <td>
                     <a href="/watch/{{ video.id }}">
-                        <img src="http://img.youtube.com/vi/{{ video.url[32:43] }}/0.jpg" alt="{{ video.title }}">
+                        <img src="http://img.youtube.com/vi/{{ video.url[32:43] }}/0.jpg" alt="{{ video.title }}"
+                             class="thumbnail">
                     </a>
                 </td>
                 <td>{{ video.description }}</td>
             </tr>
-        </table>
-    {% endfor %}
+        {% endfor %}
+    </table>
 {% endblock %}

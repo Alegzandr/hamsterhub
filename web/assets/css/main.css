@@ -436,6 +436,14 @@ input {
 input[type="submit"] {
   margin-top: 10px; }
 
+iframe {
+  width: 80vw;
+  height: 44.99vw;
+  background: #000; }
+
+.thumbnail {
+  width: 128px; }
+
 footer {
   position: absolute;
   right: 0;
