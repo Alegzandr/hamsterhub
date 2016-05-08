@@ -9,4 +9,6 @@ EntityBundle\Entity\Comment:
     manyToOne:
         thread:
             targetEntity: EntityBundle\Entity\Thread
+        author:
+            targetEntity: EntityBundle\Entity\User
     lifecycleCallbacks: {  }
