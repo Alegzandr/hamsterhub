@@ -2,6 +2,12 @@ hamster_hub:
     resource: "@HamsterHubBundle/Resources/config/routing.yml"
     prefix:   /
 
+fos_comment_api:
+    type: rest
+    resource: "@FOSCommentBundle/Resources/config/routing.yml"
+    prefix: /api
+    defaults: { _format: html }
+
 user:
     resource: "@UserBundle/Resources/config/routing.yml"
     prefix:   /
