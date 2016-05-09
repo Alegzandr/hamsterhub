@@ -23,6 +23,11 @@ class AppKernel extends Kernel
             new UserBundle\UserBundle(),
             new EntityBundle\EntityBundle(),
             new HamsterHubBundle\HamsterHubBundle(),
+            if (in_array($this->getEnvironment(), array('dev', 'test'))) {
+                $bundles[] = new Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle();
+            }
+
+            return $bundles
         );
 
         if (in_array($this->getEnvironment(), array('dev', 'test'), true)) {
@@ -37,6 +42,6 @@ class AppKernel extends Kernel
 
     public function registerContainerConfiguration(LoaderInterface $loader)
     {
-        $loader->load($this->getRootDir().'/config/config_'.$this->getEnvironment().'.yml');
+        $loader->load($this->getRootDir() . '/config/config_' . $this->getEnvironment() . '.yml');
     }
 }
