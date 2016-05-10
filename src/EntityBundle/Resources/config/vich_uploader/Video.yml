@@ -1,0 +1,4 @@
+EntityBundle\Entity\Video:
+    avatar:
+        mapping:           video_thumbnail
+        filename_property: thumbnail_name
