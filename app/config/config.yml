@@ -37,6 +37,8 @@ framework:
 twig:
     debug:            "%kernel.debug%"
     strict_variables: "%kernel.debug%"
+    form_themes:
+        - 'VichUploaderBundle:Form:fields.html.twig'
 
 # Doctrine Configuration
 doctrine:
@@ -75,6 +77,9 @@ fos_user:
     registration:
         form:
             type: UserBundle\Form\RegistrationType
+    profile:
+        form:
+            type: UserBundle\Form\ProfileType
 
 fos_comment:
     db_driver: orm
@@ -92,8 +97,8 @@ assetic:
 
 vich_uploader:
     db_driver: orm
-
+    twig: true
     mappings:
-        user_image:
+        image:
             uri_prefix:         /images/user
             upload_destination: %kernel.root_dir%/../web/images/user

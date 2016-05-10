@@ -15,6 +15,12 @@ class RegistrationType extends AbstractType
             'label' => 'form.birthdate',
             'translation_domain' => 'FOSUserBundle'
         ));
+        $builder->add('image', 'vich_image', array(
+            'required'      => false,
+            'allow_delete'  => true, // not mandatory, default is true
+            'download_link' => true, // not mandatory, default is true
+            'label'         => 'Photo de profil'
+        ));
     }
 
     public function getParent()
@@ -26,7 +32,7 @@ class RegistrationType extends AbstractType
     {
         return 'app_user_registration';
     }
-    
+
     public function getName()
     {
         return $this->getBlockPrefix();
