@@ -14,12 +14,7 @@ class User extends BaseUser
      * @var int
      */
     protected $id;
-
-    /**
-     * @var \DateTime
-     */
-    private $date;
-
+    
 
     /**
      * Get id

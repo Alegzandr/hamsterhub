@@ -1,4 +1,4 @@
 EntityBundle\Entity\User:
-    avatar:
-        mapping:           user_avatar
-        filename_property: avatar_name
+    image:
+        mapping:           user_image
+        filename_property: image_name

@@ -92,18 +92,8 @@ assetic:
 
 vich_uploader:
     db_driver: orm
-    storage: file_system
-    twig: true
+
     mappings:
-        user_avatar:
-            uri_prefix:         /upload/avatar
-            upload_destination: %kernel.root_dir%/../web/upload/avatar
-            delete_on_remove: true
-            delete_on_update: true
-            inject_on_load: true
-        video_thumbnail:
-            uri_prefix:         /upload/thumbnail
-            upload_destination: %kernel.root_dir%/../web/upload/thumbnail
-            delete_on_remove: true
-            delete_on_update: true
-            inject_on_load: true
+        user_image:
+            uri_prefix:         /images/user
+            upload_destination: %kernel.root_dir%/../web/images/user
