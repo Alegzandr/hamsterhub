@@ -4,4 +4,6 @@
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
     <p>{{ 'profile.show.birthdate'|trans }}: {{ user.birthdate|date('d/m/Y') }}</p>
+
+    <img src="{{ vich_uploader_asset(user, 'image') }}" alt="Avatar">
 </div>
