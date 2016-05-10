@@ -5,5 +5,11 @@
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
     <p>{{ 'profile.show.birthdate'|trans }}: {{ user.birthdate|date('d/m/Y') }}</p>
 
-    <img src="{{ vich_uploader_asset(user, 'image') }}" alt="Avatar">
+    <img src="
+        {% if user.imageName is not defined %}
+            {{ vich_uploader_asset(user, 'image') }}
+        {% else %}
+            {{ asset('images/user/default.png') }}
+        {% endif %}
+    " alt="Avatar">
 </div>

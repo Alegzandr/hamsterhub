@@ -14,10 +14,8 @@ EntityBundle\Entity\User:
         imageName:
             type: string
             length: 255
-            options:
-                default: ''
+            nullable: true
         updatedAt:
             type: date
-            options:
-                default: '0000-00-00'
+            nullable: true
     lifecycleCallbacks: {  }
