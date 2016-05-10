@@ -3,8 +3,16 @@ hamster_hub_homepage:
     defaults: { _controller: HamsterHubBundle:Default:index }
 
 hamster_hub_dashboard:
-    path:     /dashboard/{username}
+    path:     /dashboard
     defaults: { _controller: HamsterHubBundle:Dashboard:index }
+
+hamster_hub_dashboard_remove:
+    path:     /dashboard/{id}/remove
+    defaults: { _controller: HamsterHubBundle:Dashboard:remove }
+
+hamster_hub_dashboard_edit:
+    path:     /dashboard/{id}/edit
+    defaults: { _controller: HamsterHubBundle:Dashboard:edit }
 
 hamster_hub_channel:
     path:     /channel/{username}

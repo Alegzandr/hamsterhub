@@ -13,7 +13,7 @@
             <li><a href="/">Accueil</a></li>
             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                 <li><a href="#" id="upload">Envoyer une vidéo</a></li>
-                <li><a href="/dashboard/{{ app.user.usernamecanonical }}">Mes vidéos</a></li>
+                <li><a href="/dashboard">Mes vidéos</a></li>
                 <li>{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                 <a href="{{ path('fos_user_security_logout') }}">
                     {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}

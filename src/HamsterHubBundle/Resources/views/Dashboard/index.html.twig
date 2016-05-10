@@ -21,7 +21,11 @@
                              class="thumbnail">
                     </a>
                 </td>
-                <td>{{ video.description }}</td>
+                <td>
+                    {{ video.description }}
+                    <br>
+                    <a href="/dashboard/{{ video.id }}/remove">Supprimer</a>
+                </td>
             </tr>
         {% endfor %}
     </table>
