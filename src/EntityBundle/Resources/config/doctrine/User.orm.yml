@@ -11,4 +11,9 @@ EntityBundle\Entity\User:
     fields:
         birthdate:
             type: date
+        imageName:
+            type: string
+            length: 255
+        updatedAt:
+            type: date
     lifecycleCallbacks: {  }
