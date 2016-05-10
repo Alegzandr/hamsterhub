@@ -60,11 +60,11 @@ class User extends BaseUser
     /**
      * NOTE: This is not a mapped field of entity metadata, just a simple property.
      *
-     * @Vich\UploadableField(mapping="product_image", fileNameProperty="imageName")
+     * @Vich\UploadableField(mapping="image", fileNameProperty="imageName")
      *
      * @var File
      */
-    private $imageFile;
+    private $image;
 
     /**
      * @ORM\Column(type="string", length=255)
@@ -91,9 +91,9 @@ class User extends BaseUser
      *
      * @return Product
      */
-    public function setImageFile(File $image = null)
+    public function setImage(File $image = null)
     {
-        $this->imageFile = $image;
+        $this->image = $image;
 
         if ($image) {
             // It is required that at least one field changes if you are using doctrine
@@ -107,9 +107,9 @@ class User extends BaseUser
     /**
      * @return File
      */
-    public function getImageFile()
+    public function getImage()
     {
-        return $this->imageFile;
+        return $this->image;
     }
 
     /**

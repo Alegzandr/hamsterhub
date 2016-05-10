@@ -14,6 +14,10 @@ EntityBundle\Entity\User:
         imageName:
             type: string
             length: 255
+            options:
+                default: ''
         updatedAt:
             type: date
+            options:
+                default: '0000-00-00'
     lifecycleCallbacks: {  }
