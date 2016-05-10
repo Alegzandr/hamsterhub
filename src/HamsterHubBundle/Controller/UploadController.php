@@ -9,6 +9,7 @@ use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateTimeType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use HamsterHubBundle\Form\Type\UploadVideoType;
+use Symfony\Component\HttpFoundation\Response;
 
 class UploadController extends Controller
 {
@@ -28,13 +29,38 @@ class UploadController extends Controller
                 $em->persist($video);
                 $em->flush();
 
-                return $this->redirectToRoute('hamster_hub_homepage');
-            }
+                $response = new Response();
+                $response->setContent(json_encode(array(
+                    'success' => true
+                )));
+                $response->headers->set('Content-Type', 'application/json');
+                return $response;
+            } elseif ($form->isSubmitted()) {
+                $errors = array();
 
-            return $this->render(
-                'HamsterHubBundle:Upload:index.html.twig',
-                array('form' => $form->createView())
-            );
+                foreach ($form->getErrors() as $error) {
+                    $errors[$form->getName()][] = $error->getMessage();
+                }
+
+                foreach ($form as $child /** @var Form $child */) {
+                    if (!$child->isValid()) {
+                        foreach ($child->getErrors() as $error) {
+                            $errors[$child->getName()][] = $error->getMessage();
+                        }
+                    }
+                }
+
+                $response = new Response();
+                $response->setContent(json_encode($errors));
+                $response->headers->set('Content-Type', 'application/json');
+                $response->setStatusCode(400);
+                return $response;
+            }
         }
+
+        return $this->render(
+            'HamsterHubBundle:Upload:index.html.twig',
+            array('form' => $form->createView())
+        );
     }
 }
