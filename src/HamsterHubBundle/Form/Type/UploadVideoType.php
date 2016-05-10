@@ -14,9 +14,9 @@ class UploadVideoType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('url', TextType::class, array('label' => 'URL YouTube'))
-            ->add('title', TextType::class, array('label' => 'Titre'))
-            ->add('description', TextType::class, array('label' => 'Description'))
+            ->add('url', TextType::class, array('label' => false, 'attr' => array('placeholder' => 'Url YouTube')))
+            ->add('title', TextType::class, array('label' => false, 'attr' => array('placeholder' => 'Titre')))
+            ->add('description', TextType::class, array('label' => false, 'attr' => array('placeholder' => 'Description')))
             ->add('save', SubmitType::class, array('label' => 'Upload'))
         ;
     }

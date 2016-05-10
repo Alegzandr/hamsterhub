@@ -42,9 +42,10 @@ class AuthenticationHandler
     public function onAuthenticationFailure(Request $request, AuthenticationException $exception)
     {
         if ($request->isXmlHttpRequest()) {
-            $result = array('success' => false, 'message' => $exception->getMessage());
+            $result = $exception->getMessage();
             $response = new Response(json_encode($result));
             $response->headers->set('Content-Type', 'application/json');
+            $response->setStatusCode(400);
             return $response;
         } else {
             $request->getSession()->set(SecurityContext::AUTHENTICATION_ERROR, $exception);

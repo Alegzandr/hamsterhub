@@ -33,7 +33,7 @@ class UploadController extends Controller
                 $response->setContent(json_encode(array(
                     'success' => true
                 )));
-                $response->headers->set('Content-Type', 'application/json');
+               $response->headers->set('Content-Type', 'application/json');
                 return $response;
             } elseif ($form->isSubmitted()) {
                 $errors = array();

@@ -1,3 +1,8 @@
 {{ form_start(form, {'name': 'upload', 'action': '/upload'}) }}
-{{ form_widget(form) }}
+{{ form_widget(form.url, { 'attr': {'class': 'url'} }) }}
+<div class="url-error upload-errors">&nbsp;</div>
+{{ form_widget(form.title, { 'attr': {'class': 'title'} }) }}
+<div class="title-error upload-errors">&nbsp;</div>
+{{ form_widget(form.description, { 'attr': {'class': 'description'} }) }}
+<div class="description-error upload-errors">&nbsp;</div>
 {{ form_end(form) }}

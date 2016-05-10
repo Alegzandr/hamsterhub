@@ -4,7 +4,6 @@ EntityBundle\Entity\Video:
             - NotBlank: ~
         url:
             - NotBlank: ~
-            - Url: ~
             - Regex: '/https:\/\/www.youtube.com\/watch\?v=.........../'
         description:
             - NotBlank: ~
