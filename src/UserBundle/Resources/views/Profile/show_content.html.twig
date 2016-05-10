@@ -6,7 +6,7 @@
     <p>{{ 'profile.show.birthdate'|trans }}: {{ user.birthdate|date('d/m/Y') }}</p>
 
     <img src="
-        {% if user.image_name is not defined %}
+        {% if user.imageName is not empty %}
             {{ vich_uploader_asset(user, 'image') }}
         {% else %}
             {{ asset('images/user/default.png') }}
