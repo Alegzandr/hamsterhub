@@ -1,4 +1,6 @@
-{% extends "UserBundle::layout.html.twig" %}
+{% extends "HamsterHubBundle::base.html.twig" %}
+
+{% block title %}{{ user.username }}{% endblock %}
 
 {% block fos_user_content %}
 {% include "UserBundle:Profile:show_content.html.twig" %}
