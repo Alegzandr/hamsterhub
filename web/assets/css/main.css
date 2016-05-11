@@ -486,9 +486,32 @@ td {
   border-radius: 3px;
   padding: 10px; }
 
+@media (min-width: 641px) {
+  .menu-icon {
+    display: none; }
+
+  nav {
+    width: 100vw;
+    height: auto;
+    position: static;
+    background-color: transparent; }
+    nav ul {
+      position: absolute;
+      top: -15px;
+      right: 20px; }
+
+  nav > ul > li {
+    display: inline-block;
+    border: 0; }
+    nav > ul > li a {
+      color: #fff;
+      text-transform: none;
+      font-weight: normal;
+      font-size: .9em; } }
 main {
   padding: 0 20px;
-  font-size: 1rem; }
+  font-size: 1rem;
+  min-height: calc(100vh - 95px); }
 
 .crud {
   font-size: .9em; }
@@ -505,6 +528,20 @@ main {
 .ui-dialog-titlebar-close {
   display: none; }
 
+@media (min-width: 641px) {
+  main {
+    font-size: 1.1rem;
+    width: 80vw;
+    padding: 0 10vw; }
+
+  table {
+    width: 70vw; } }
+@media (min-width: 1025px) {
+  main {
+    font-size: 1.1rem;
+    width: 76vw;
+    padding: 0 12vw;
+    margin-left: -10px; } }
 .register-popup, .login-popup, .upload-popup {
   background: #fff;
   padding: 20px;
@@ -565,9 +602,10 @@ form[name="upload"] {
   margin-bottom: 10px; }
 
 iframe {
-  width: 80vw;
-  height: 44.99vw;
-  background: #000; }
+  width: 75vw;
+  height: 42.18vw;
+  background: #000;
+  border-left: 40px solid #fff; }
 
 iframe, .avatar, .video-description {
   margin: 0 auto; }
@@ -589,9 +627,17 @@ h2 {
 .thumbnail {
   width: 80px; }
 
+@media (min-width: 1025px) {
+  iframe {
+    border: 0; } }
 footer {
   text-align: center;
   padding: 25px;
   font-size: .8rem; }
+
+@media (min-width: 1025px) {
+  footer {
+    width: 76vw;
+    padding: 25px 12vw; } }
 
 /*# sourceMappingURL=main.css.map */

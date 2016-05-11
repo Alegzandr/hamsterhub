@@ -61,3 +61,34 @@ td {
   border-radius: 3px;
   padding: 10px;
 }
+
+@media (min-width: 641px) {
+  .menu-icon {
+    display: none;
+  }
+
+  nav {
+    width: 100vw;
+    height: auto;
+    position: static;
+    background-color: transparent;
+
+    ul {
+      position: absolute;
+      top: -15px;
+      right: 20px;
+    }
+  }
+
+  nav > ul > li {
+    display: inline-block;
+    border: 0;
+
+    a {
+      color: $bright-font-color;
+      text-transform: none;
+      font-weight: normal;
+      font-size: .9em;
+    }
+  }
+}

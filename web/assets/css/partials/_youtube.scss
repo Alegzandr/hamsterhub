@@ -1,7 +1,8 @@
 iframe {
-  width: 80vw;
-  height: 44.99vw;
+  width: 75vw;
+  height: 42.18vw;
   background: #000;
+  border-left: 40px solid #fff;
 }
 
 iframe, .avatar, .video-description {
@@ -28,4 +29,10 @@ h2 {
 
 .thumbnail {
   width: 80px;
+}
+
+@media (min-width: 1025px) {
+  iframe {
+    border: 0;
+  }
 }

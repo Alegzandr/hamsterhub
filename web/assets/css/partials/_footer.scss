@@ -3,3 +3,10 @@ footer {
   padding: 25px;
   font-size: .8rem;
 }
+
+@media (min-width: 1025px) {
+  footer {
+    width: 76vw;
+    padding: 25px 12vw;
+  }
+}

@@ -1,6 +1,7 @@
 main {
   padding: 0 20px;
   font-size: 1rem;
+  min-height: calc(100vh - 95px);
 }
 
 .crud {
@@ -19,4 +20,24 @@ main {
 
 .ui-dialog-titlebar-close {
   display: none;
+}
+
+@media (min-width: 641px) {
+  main {
+    font-size: 1.1rem;
+    width: 80vw;
+    padding: 0 10vw;
+  }
+  table {
+    width: 70vw;
+  }
+}
+
+@media (min-width: 1025px) {
+  main {
+    font-size: 1.1rem;
+    width: 76vw;
+    padding: 0 12vw;
+    margin-left: -10px;
+  }
 }
