@@ -13,9 +13,13 @@ $(function () {
             },
             error: function (data) {
                 $('.loading').hide();
-                var response = data.responseText;
+                var response;
+                if (data.responseText == '"Bad credentials.') {
+                }
+                response = "Mauvais identifiants.";
                 $('.error').html(response);
             }
+            
         });
         return false;
     });

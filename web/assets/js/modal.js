@@ -52,10 +52,10 @@ $(function () {
         $('.mask').fadeOut();
     });
 
-    $('#quit').click(function () {
-        $('.register-popup').fadeOut();
-        $('.login-popup').fadeOut();
-        $('.upload-popup').fadeOut();
+    $('.quit').click(function () {
+        $('.register-popup').css('display', 'none');
+        $('.login-popup').css('display', 'none');
+        $('.upload-popup').css('display', 'none');
         $('.mask').fadeOut();
     });
 
