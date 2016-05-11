@@ -1,23 +1,27 @@
 header {
   border-bottom: 1px solid #000;
   width: 100%;
-  overflow: hidden;
-}
-
-nav {
   height: 60px;
-}
-nav > ul > li {
-  display: inline-block;
-}
-
-.left-nav {
-  display: inline-block;
-  padding-left: 20px;
+  position: relative;
+  padding: 0 15px 0 0;
 }
 
-.right-nav {
-  display: inline-block;
-  float: right;
-  padding-right: 20px;
+.logo {
+  margin-left: 75px;
 }
+
+.menu-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 15px;
+}
+
+.slide-menu {
+  height: 100vh;
+  width: 150px;
+  position: fixed;
+  left: -150px;
+}
+

@@ -423,22 +423,25 @@ th {
 header {
   border-bottom: 1px solid #000;
   width: 100%;
-  overflow: hidden; }
+  height: 60px;
+  position: relative;
+  padding: 0 15px 0 0; }
 
-nav {
-  height: 60px; }
+.logo {
+  margin-left: 75px; }
 
-nav > ul > li {
-  display: inline-block; }
+.menu-icon {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  left: 15px; }
 
-.left-nav {
-  display: inline-block;
-  padding-left: 20px; }
-
-.right-nav {
-  display: inline-block;
-  float: right;
-  padding-right: 20px; }
+.slide-menu {
+  height: 100vh;
+  width: 150px;
+  position: fixed;
+  left: -150px; }
 
 .register-popup, .login-popup, .upload-popup {
   background: #fff;
@@ -524,11 +527,6 @@ h2 {
   width: 64px; }
 
 footer {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  padding: 1rem;
   text-align: center; }
 
 /*# sourceMappingURL=main.css.map */

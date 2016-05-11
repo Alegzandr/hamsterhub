@@ -9,19 +9,23 @@
 <body>
 <header>
     <nav>
-        <ul>
-            <li><a href="/">Accueil</a></li>
-            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-                <li><a href="#" id="upload">Envoyer une vidéo</a></li>
-                <li><a href="/profile">{{ app.user.username }}</a></li>
-                <li>
-                    <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
-                </li>
-            {% else %}
-                <li><a href="#" id="register">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a></li>
-                <li><a href="#" id="login">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></li>
-            {% endif %}
-        </ul>
+        <h1 class="logo">HamsterHub</h1>
+        <img src="{{ asset('assets/img/menu.png') }}" alt="menu icon" class="menu-icon">
+        <nav class="right-nav slide-menu">
+            <ul>
+                <li><a href="/">Accueil</a></li>
+                {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                    <li><a href="#" id="upload">Envoyer une vidéo</a></li>
+                    <li><a href="/profile">{{ app.user.username }}</a></li>
+                    <li>
+                        <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+                    </li>
+                {% else %}
+                    <li><a href="#" id="register">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a></li>
+                    <li><a href="#" id="login">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></li>
+                {% endif %}
+            </ul>
+        </nav>
     </nav>
 </header>
 
@@ -69,6 +73,7 @@
 <script src="{{ asset('assets/js/modal.js') }}"></script>
 <script src="{{ asset('assets/js/login.js') }}"></script>
 <script src="{{ asset('assets/js/upload.js') }}"></script>
+<script src="{{ asset('assets/js/slide.js') }}"></script>
 {% block javascript %}{% endblock %}
 </body>
 </html>
