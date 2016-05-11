@@ -2,9 +2,11 @@
 @include normalize();
 
 @import "modules/fonts";
+@import "modules/colors";
 
 @import "partials/base";
+@import "partials/loader";
 @import "partials/header";
 @import "partials/modals";
-@import "partials/_youtube";
+@import "partials/youtube";
 @import "partials/footer";

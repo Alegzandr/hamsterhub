@@ -3,17 +3,28 @@
 {% block title %}{{ video.title }}{% endblock %}
 
 {% block body %}
-    <h3>{{ video.title }}</h3>
+    <h1>{{ video.title }}</h1>
 
-    <h4>
-        by <a href="/channel/{{ video.user }}">{{ video.user }}</a>
-    </h4>
+    <img src="
+    {% if author.imageName is not empty %}
+            {{ vich_uploader_asset(author, 'image') }}
+        {% else %}
+            {{ asset('images/user/default.png') }}
+        {% endif %}
+    " alt="Avatar" class="avatar">
+    <h2>
+        <a href="/channel/{{ video.user }}">{{ video.user }}</a>
+    </h2>
+
+    <br>
 
     <iframe src="https://www.youtube.com/embed/{{ video.url[32:43] }}" allowfullscreen></iframe>
 
-    <div class="description">
+    <div class="video-description">
         {{ video.description }}
     </div>
 
-    {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': video.id } %}
+    <div class="comments">
+        {% include 'FOSCommentBundle:Thread:async.html.twig' with {'id': video.id } %}
+    </div>
 {% endblock %}

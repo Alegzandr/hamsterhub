@@ -8,10 +8,14 @@ class WatchController extends Controller
 {
     public function indexAction($videoId)
     {
-        $url = $this->getDoctrine()
+        $video = $this->getDoctrine()
             ->getRepository('EntityBundle:Video')
             ->findOneById($videoId);
 
-        return $this->render('HamsterHubBundle:Watch:index.html.twig', array('video' => $url));
+        $author = $this->getDoctrine()
+            ->getRepository('EntityBundle:User')
+            ->findOneById($video->getAuthorId());
+
+        return $this->render('HamsterHubBundle:Watch:index.html.twig', array('video' => $video, 'author' => $author));
     }
 }

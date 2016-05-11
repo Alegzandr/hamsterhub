@@ -15,7 +15,7 @@
                 <li><a href="#" id="upload">Envoyer une vidéo</a></li>
                 <li><a href="/profile">{{ app.user.username }}</a></li>
                 <li>
-                <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
+                    <a href="{{ path('fos_user_security_logout') }}">{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}</a>
                 </li>
             {% else %}
                 <li><a href="#" id="register">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a></li>
@@ -27,6 +27,10 @@
 
 <main role="main">
     <div class="mask"></div>
+    <div class="loading">
+        <div class="cube1"></div>
+        <div class="cube2"></div>
+    </div>
     <div class="register-popup">
         {% render url('fos_user_registration_register') %}
     </div>

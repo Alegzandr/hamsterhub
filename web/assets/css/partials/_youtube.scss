@@ -4,6 +4,27 @@ iframe {
   background: #000;
 }
 
+iframe, h1, .avatar, .video-description {
+  margin-left: 10vw;
+}
+
+.comments {
+  padding-left: 10vw;
+  line-height: 1.5;
+}
+
+.avatar {
+  width: 32px;
+}
+
+.avatar, h2 {
+  float: left;
+}
+
+h2 {
+  margin-left: 15px;
+}
+
 .thumbnail {
-  width: 128px;
+  width: 64px;
 }
