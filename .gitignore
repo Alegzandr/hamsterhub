@@ -22,3 +22,5 @@ Thumbs.db
 **/.sass-cache/*
 **.sass-cache**
 .css.map
+!/web/images/user/default.png
+/web/images/user/*
