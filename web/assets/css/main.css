@@ -369,6 +369,13 @@ html {
 body {
   overflow-x: hidden; }
 
+a, a:hover, a:active {
+  text-decoration: none;
+  color: #303030; }
+
+a:hover {
+  text-decoration: underline; }
+
 .loading {
   width: 60px;
   height: 60px;
@@ -432,10 +439,56 @@ nav {
   position: fixed;
   top: 0;
   left: -150px;
-  z-index: 100000; }
+  z-index: 100000;
+  background-color: #222222; }
+
+nav > ul {
+  margin-left: -40px;
+  margin-top: 0; }
+
+nav > ul > li {
+  list-style-type: none;
+  border-bottom: 1px solid #fff;
+  padding: 15px;
+  text-align: center; }
+  nav > ul > li a {
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: .9em; }
 
 .menu-icon {
-  border: 1px solid #000; }
+  margin-left: 17px;
+  position: relative;
+  top: -59px;
+  width: 24px; }
+
+header {
+  background-color: #222222;
+  height: 50px;
+  font-size: 1rem;
+  line-height: 50px;
+  margin-top: -12px; }
+
+.title {
+  font-size: 1em;
+  margin-left: 57px; }
+
+.title > a, .title > a:active, .title > a:hover {
+  text-decoration: none;
+  color: #fff; }
+
+td {
+  padding: 2.5px; }
+
+.table-desc {
+  background: #D4D4D4;
+  border-radius: 3px;
+  padding: 10px; }
+
+main {
+  padding: 0 20px;
+  font-size: 1rem; }
 
 .register-popup, .login-popup, .upload-popup {
   background: #fff;
@@ -501,8 +554,8 @@ iframe {
   height: 44.99vw;
   background: #000; }
 
-iframe, h1, .avatar, .video-description {
-  margin-left: 10vw; }
+iframe, .avatar, .video-description {
+  margin: 0 auto; }
 
 .comments {
   padding-left: 10vw;
@@ -515,12 +568,15 @@ iframe, h1, .avatar, .video-description {
   float: left; }
 
 h2 {
-  margin-left: 15px; }
+  margin-left: 15px;
+  font-size: .8em; }
 
 .thumbnail {
-  width: 64px; }
+  width: 80px; }
 
 footer {
-  text-align: center; }
+  text-align: center;
+  padding: 25px;
+  font-size: .8rem; }
 
 /*# sourceMappingURL=main.css.map */

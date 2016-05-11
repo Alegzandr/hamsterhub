@@ -3,5 +3,7 @@
 {% block title %}Modifier mon profil{% endblock %}
 
 {% block fos_user_content %}
-{% include "UserBundle:Profile:edit_content.html.twig" %}
+    <h1>Modifier le profil</h1>
+    <hr>
+    {% include "UserBundle:Profile:edit_content.html.twig" %}
 {% endblock fos_user_content %}

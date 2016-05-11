@@ -4,8 +4,8 @@ iframe {
   background: #000;
 }
 
-iframe, h1, .avatar, .video-description {
-  margin-left: 10vw;
+iframe, .avatar, .video-description {
+  margin: 0 auto;
 }
 
 .comments {
@@ -23,8 +23,9 @@ iframe, h1, .avatar, .video-description {
 
 h2 {
   margin-left: 15px;
+  font-size: .8em;
 }
 
 .thumbnail {
-  width: 64px;
+  width: 80px;
 }
