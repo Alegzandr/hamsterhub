@@ -26,8 +26,8 @@
                 <td>
                     {{ video.description }}
                     <br>
-                    <a href="/dashboard/{{ video.id }}/edit">Modifier</a>
-                    <a href="/dashboard/{{ video.id }}/remove">Supprimer</a>
+                    <a href="/dashboard/{{ video.id }}/edit" class="crud">Modifier</a>
+                    <a href="/dashboard/{{ video.id }}/remove" class="crud">Supprimer</a>
                 </td>
             </tr>
         {% endfor %}

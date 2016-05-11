@@ -42,12 +42,12 @@ header {
   margin-top: -12px;
 }
 
-.title {
+.brand {
   font-size: 1em;
   margin-left: 57px;
 }
 
-.title > a, .title > a:active, .title > a:hover {
+.brand > a, .brand > a:active, .brand > a:hover {
   text-decoration: none;
   color: $bright-font-color;
 }
@@ -57,7 +57,7 @@ td {
 }
 
 .table-desc {
-  background: #D4D4D4;
+  background: $case-color;
   border-radius: 3px;
   padding: 10px;
 }

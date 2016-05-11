@@ -470,11 +470,11 @@ header {
   line-height: 50px;
   margin-top: -12px; }
 
-.title {
+.brand {
   font-size: 1em;
   margin-left: 57px; }
 
-.title > a, .title > a:active, .title > a:hover {
+.brand > a, .brand > a:active, .brand > a:hover {
   text-decoration: none;
   color: #fff; }
 
@@ -489,6 +489,21 @@ td {
 main {
   padding: 0 20px;
   font-size: 1rem; }
+
+.crud {
+  font-size: .9em; }
+
+.ui-dialog {
+  background-color: #222222;
+  border-radius: 5px;
+  line-height: 2;
+  text-align: center;
+  opacity: .9;
+  color: #fff;
+  position: fixed; }
+
+.ui-dialog-titlebar-close {
+  display: none; }
 
 .register-popup, .login-popup, .upload-popup {
   background: #fff;

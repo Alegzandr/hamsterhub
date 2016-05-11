@@ -2,7 +2,7 @@ $(function () {
     $('#register').click(function () {
         $('.login-popup').hide();
         $('.upload-popup').hide();
-        
+
         if ($('.register-popup').css('display') === 'none') {
             $('.register-popup').fadeIn();
             $('.mask').fadeIn();
@@ -43,19 +43,36 @@ $(function () {
         $('.login-popup').fadeOut();
         $('.upload-popup').fadeOut();
         $('.mask').fadeOut();
-    })
+    });
 
     $('.mask').click(function () {
         $('.register-popup').fadeOut();
         $('.login-popup').fadeOut();
         $('.upload-popup').fadeOut();
         $('.mask').fadeOut();
-    })
+    });
 
-    $('.close-cross').click(function () {
+    $('#quit').click(function () {
         $('.register-popup').fadeOut();
         $('.login-popup').fadeOut();
         $('.upload-popup').fadeOut();
         $('.mask').fadeOut();
-    })
+    });
+
+    $('.crud').on('click', function (e) {
+        var link = this;
+
+        e.preventDefault();
+
+        $('<div>Êtes vous sûr ?<hr></div>').dialog({
+            buttons: {
+                'Valider': function () {
+                    window.location = link.href;
+                },
+                'Annuler': function () {
+                    $(this).dialog('close');
+                }
+            }
+        });
+    });
 });

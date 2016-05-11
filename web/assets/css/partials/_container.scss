@@ -3,3 +3,20 @@ main {
   font-size: 1rem;
 }
 
+.crud {
+  font-size: .9em;
+}
+
+.ui-dialog {
+  background-color: $header-color;
+  border-radius: 5px;
+  line-height: 2;
+  text-align: center;
+  opacity: .9;
+  color: $bright-font-color;
+  position: fixed;
+}
+
+.ui-dialog-titlebar-close {
+  display: none;
+}
