@@ -8,4 +8,8 @@ By Alexandre Farrenq & Clara Fourcade
 - php app/console doctrine:schema:update --force
 
 # How to load fixtures ?
-- Import .sql file in fixture folder into your database
+- Import .sql file in 'fixtures' folder into your database
+
+# Fixtures
+- User 1 : romain (pwd: rom)
+- User 2 : clement (pwd: clem)
